@@ -28,6 +28,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='pt-BR' className={`${dmSansFont.variable} ${kalamFont.variable}`}>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#B45309" />
+      </head>
+      
       <body className='min-h-screen w-full font-sans'>{children}</body>
     </html>
   )
