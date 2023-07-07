@@ -1,3 +1,4 @@
+import { Navbar } from '@/components/primitives/Navbar';
 import { DM_Sans, Kalam } from 'next/font/google';
 import { ReactNode } from 'react';
 import './globals.css';
@@ -33,7 +34,10 @@ export default function RootLayout({
         <meta name="theme-color" content="#B45309" />
       </head>
       
-      <body className='min-h-screen w-full font-sans'>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
