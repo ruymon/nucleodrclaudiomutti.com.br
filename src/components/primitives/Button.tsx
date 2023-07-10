@@ -12,7 +12,7 @@ const buttonVariants = cva(
         destructive: "bg-red-700 text-gray-100 hover:bg-red-800 focus-visible:ring-red-700/30",
         outline: "border border-gray-400 text-gray-600 bg-inherit hover:bg-gray-800 hover:border-gray-800 hover:text-gray-100 focus-visible:ring-gray-200",
         outlineWhite: "border border-gray-100 text-gray-100 bg-transparent hover:bg-amber-800  hover:border-amber-800 focus-visible:ring-amber-800/30",
-        outlineDim: "border border-gray-200 text-gray-300 bg-inherit hover:bg-gray-100 hover:text-gray-600 focus-visible:ring-gray-200",
+        outlineDim: "border border-gray-300 text-gray-400 bg-inherit hover:bg-gray-100 hover:text-gray-600 focus-visible:ring-gray-200",
         link: "text-amber-700 hover:text-amber-800 focus-visible:ring-amber-700/30",
       },
       size: {
@@ -20,6 +20,7 @@ const buttonVariants = cva(
         sm: "px-3 py-1 text-xs gap-2",
         lg: "px-8 py-4 gap-2",
         icon: "p-2",
+        "small-icon": "p-1",
       },
     },
     defaultVariants: {
@@ -48,3 +49,5 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button"
 
 export { Button, buttonVariants }
+export type IButtonVariants = VariantProps<typeof buttonVariants>["variant"];
+export type IButtonSizes = VariantProps<typeof buttonVariants>["size"];

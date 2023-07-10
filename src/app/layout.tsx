@@ -1,3 +1,4 @@
+import { Footer } from '@/components/primitives/Footer';
 import { Navbar } from '@/components/primitives/Navbar';
 import { DM_Sans, Kalam } from 'next/font/google';
 import { ReactNode } from 'react';
@@ -37,6 +38,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )

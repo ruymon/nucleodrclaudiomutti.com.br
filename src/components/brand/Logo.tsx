@@ -10,10 +10,12 @@ const logoVariants = cva(
         default: "text-gray-800",
         ghost: "text-gray-400",
         brand: "text-amber-700",
+        white: "text-white",
       },
       size: {
         default: "h-9",
         sm: "h-6",
+        lg: "h-11",
       },
     },
     defaultVariants: {

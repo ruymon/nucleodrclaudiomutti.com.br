@@ -15,10 +15,6 @@
     @apply min-h-screen h-full w-full bg-white font-sans selection:bg-amber-700/10 selection:text-amber-800;
   }
 
-  .wrapper {
-    @apply w-full max-w-6xl px-6 mx-auto;
-  }
-
   ::-webkit-scrollbar {
     @apply w-[6px] h-0;
     scrollbar-width: 6px;
@@ -29,7 +25,7 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-gray-100;
+    @apply bg-gray-400;
   }
 
   ::-webkit-scrollbar, ::-webkit-scrollbar-track {

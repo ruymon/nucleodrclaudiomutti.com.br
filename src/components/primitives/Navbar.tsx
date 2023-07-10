@@ -7,7 +7,7 @@ interface NavbarProps {};
 
 export function Navbar({}: NavbarProps) {
   return (
-    <div className="w-full z-10 sticky top-0 border-b border-gray-100 bg-white shadow-b">
+    <div className="w-full z-20 sticky top-0 border-b border-gray-100 bg-white shadow-b">
       <nav className="wrapper h-16 flex items-center justify-between">
         <Logo />
 

@@ -1,15 +1,15 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import("tailwindcss").Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-dm-sans)', 'sans-serif'],
-        handwriting: ['var(--font-kalam)', 'cursive'],
+        sans: ["var(--font-dm-sans)", "sans-serif"],
+        handwriting: ["var(--font-kalam)", "cursive"],
       },
       keyframes: {
         "accordion-down": {
@@ -27,5 +27,15 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    /** @type {import("tailwindcss/types/config").PluginCreator} */
+    ({ addUtilities }) => {
+      addUtilities({
+        ".wrapper": {
+          "@apply w-full max-w-6xl px-6 mx-auto": {},
+        }
+      });
+    }
+  ],
 }
