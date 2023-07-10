@@ -15,6 +15,7 @@ const headingVariants = cva(
       accentColor: {
         gray: "text-gray-800",
         "gray-dim": "text-gray-600",
+        "gray-light": "text-gray-500",
         brand: "text-amber-700",
         "brand-dark": "text-amber-800",
       },
@@ -37,7 +38,7 @@ interface HeadingProps extends HTMLAttributes<HTMLSpanElement>, VariantProps<typ
   as?: 'h1' | 'h2' | 'h3' | 'span';
 };
 
-export function Heading({ variant, accentColor, fontWeight, className, as: Component='h2', ...props}: HeadingProps) {
+export function Heading({ variant, accentColor, fontWeight, className, as: Component = 'h2', ...props }: HeadingProps) {
 
   return (
     <Component className={cn(headingVariants({ variant: Component, accentColor, fontWeight, className }))} {...props} />

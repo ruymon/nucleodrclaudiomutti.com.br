@@ -1,4 +1,5 @@
 import { CallToActionSection } from "@/components/sections/CallToAction";
+import { DoctorGreetSection } from "@/components/sections/DoctorGreet";
 import { FeaturesSection } from "@/components/sections/Features";
 import { HeroSection } from "@/components/sections/Hero";
 import { StatisticsSection } from "@/components/sections/Statistics";
@@ -9,7 +10,7 @@ export default function Home() {
       <HeroSection />
       <StatisticsSection />
       <FeaturesSection />
-      {/* TODO: Get to know the Docs Section */}
+      <DoctorGreetSection />
       <CallToActionSection />
     </main>
   )
