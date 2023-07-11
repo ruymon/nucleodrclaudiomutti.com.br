@@ -8,7 +8,7 @@ const headingVariants = cva(
     variants: {
       variant: {
         h1: "text-5xl lg:text-6xl lg:leading-tight",
-        h2: "text-3xl lg:text-4xl lg:leading-tight",
+        h2: "text-3xl lg:text-4xl lg:!leading-snug",
         h3: "text-2xl",
         span: "",
       },

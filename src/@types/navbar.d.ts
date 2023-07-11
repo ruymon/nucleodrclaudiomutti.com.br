@@ -1,7 +1,6 @@
 export interface INavbarItem {
+  id: string;
   title: string;
-  href: string;
-  isScrollSection?: boolean;
-};
+}
 
 export type INavbar = INavbarItem[]; 

@@ -7,7 +7,7 @@ import { StatisticsSection } from "@/components/sections/Statistics";
 
 export default function Home() {
   return (
-    <main className="w-full flex flex-col gap-32">
+    <main className="w-full flex flex-col">
       <HeroSection />
       <StatisticsSection />
       <FeaturesSection />

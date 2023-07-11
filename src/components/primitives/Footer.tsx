@@ -8,7 +8,7 @@ interface FooterProps {};
 
 export function Footer({}: FooterProps) {
   return (
-    <section className="flex mt-32 border-t border-gray-100">
+    <section className="flex mt-48 border-t border-gray-100">
       <footer className="w-full flex flex-col bg-gray-50">
 
         <div className="wrapper flex py-10 items-center justify-between">

@@ -7,7 +7,7 @@ const paragraphVariants = cva(
   {
     variants: {
       variant: {
-        default: "lg:leading-relaxed",
+        default: "lg:!leading-relaxed",
         hat: "font-bold capitalize none"
       },
       size: {

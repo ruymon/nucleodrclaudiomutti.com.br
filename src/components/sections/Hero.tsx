@@ -1,6 +1,9 @@
+"use client";
+
 import { CaretDoubleDown, WhatsappLogo } from "@/assets/Icons";
 import wavingHand from "@/assets/waving-hand.png";
 import Image from "next/image";
+import { Section } from "react-scroll-section";
 import { Button } from "../primitives/Button";
 import { Heading } from "../primitives/Heading";
 import { Paragraph } from "../primitives/Paragraph";
@@ -9,10 +12,10 @@ interface HeroSectionProps {};
 
 export function HeroSection({}: HeroSectionProps) {
   return (
-    <section className="wrapper h-[calc((100vh-4rem)-((100vh-4rem)/4))] flex justify-between gap-16">
-      <aside className="h-full justify-center flex flex-col gap-16 w-full grow">
+    <Section id="hero" className="wrapper h-fit py-20 lg:py-0 lg:h-[calc(100vh-4rem)] items-center lg:items-start flex lg:justify-between lg:gap-16">
+      <aside className="h-full justify-center flex flex-col gap-16 w-full grow text-center items-center lg:text-left lg:items-start">
         <div className="flex flex-col gap-4">
-          <Paragraph variant="hat" accentColor="brand" className="flex items-center gap-2">
+          <Paragraph variant="hat" accentColor="brand" className="flex items-center gap-2 justify-center lg:justify-start">
             <Image width={16} height={16} src={wavingHand} alt="Mão acenando"/>
             BOAS-VINDAS AO NÚCLEO CLAUDIO MUTTI
           </Paragraph>
@@ -20,7 +23,7 @@ export function HeroSection({}: HeroSectionProps) {
           <Paragraph size="large" accentColor="gray-light">Nossa metodologia vai além dos sintomas, atendemos de forma personalizada em busca de proporcionar bem-estar e longevidade.</Paragraph>
         </div>
         
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 flex-col sm:flex-row">
           <Button size="lg">
             <WhatsappLogo size={20} />
             AGENDE SUA CONSULTA
@@ -32,7 +35,7 @@ export function HeroSection({}: HeroSectionProps) {
         </div>
       </aside>
 
-      <figure className="w-full h-full max-w-[40%]">
+      <figure className="hidden lg:flex w-full h-[90%] max-w-[40%]">
         <Image 
           width={1161} 
           height={80}
@@ -41,6 +44,6 @@ export function HeroSection({}: HeroSectionProps) {
           alt="Banner" 
         />
       </figure>
-    </section>
+    </Section>
   );
 };
