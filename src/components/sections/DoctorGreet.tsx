@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
 import { useState } from "react";
-import { Section } from "react-scroll-section";
 import { Button } from "../primitives/Button";
 import { DoctorGreetCard } from "../primitives/DoctorGreetCard";
 
@@ -30,7 +29,7 @@ export function DoctorGreetSection({}: DoctorGreetSectionProps) {
   }, []);
 
   return (
-    <Section id="greet" className="wrapper xl:relative flex flex-col gap-8 mt-28">
+    <section id="greet" className="wrapper xl:relative flex flex-col gap-8 mt-28">
       <div className="xl:absolute xl:wrapper flex items-center gap-2 xl:gap-0 xl:justify-between bg-transparent xl:pointer-events-none xl:z-10 xl:inset-0">
         <Button
           size="icon"
@@ -60,6 +59,6 @@ export function DoctorGreetSection({}: DoctorGreetSectionProps) {
         <div className={cn("w-1.5 h-1.5 rounded-full", isAtBeginning ? 'bg-gray-200' : 'bg-gray-400')}></div>
       </div>
 
-    </Section>
+    </section>
   );
 };

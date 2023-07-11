@@ -1,7 +1,6 @@
 "use client";
 
 import { contact } from "@/helpers/contact";
-import { Section } from 'react-scroll-section';
 import { Button } from "../primitives/Button";
 import { Heading } from "../primitives/Heading";
 import { Paragraph } from "../primitives/Paragraph";
@@ -10,7 +9,7 @@ interface ContactSectionProps {};
 
 export function ContactSection({}: ContactSectionProps) {
   return (
-    <Section id="contact" className="wrapper flex gap-20 mt-24">
+    <section id="contact" className="wrapper flex gap-20 mt-24">
       <aside className="w-full max-w-sm flex flex-col gap-8">
         <Heading>Entre em contato com a gente!</Heading>
 
@@ -31,6 +30,6 @@ export function ContactSection({}: ContactSectionProps) {
       <figure className="flex-1 flex w-full bg-gray-200 items-center justify-center rounded-xl">
         <h1>MAPA</h1>
       </figure>
-    </Section>
+    </section>
   );
 };
