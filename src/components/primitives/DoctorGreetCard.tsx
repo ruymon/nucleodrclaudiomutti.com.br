@@ -31,7 +31,7 @@ export function DoctorGreetCard({ hat = 'SOBRE', name, description, image, speci
 
           <Paragraph size="large" accentColor="gray-light" className="xl:max-w-[90%]">{description}</Paragraph>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             { social.map(({ href, icon }, index) => {
               return (
                 <SocialMediaIconButton
