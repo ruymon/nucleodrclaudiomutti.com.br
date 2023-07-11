@@ -16,7 +16,7 @@ export function Footer({}: FooterProps) {
             <Logo size="lg" />
 
             <div className="flex items-center divide-x-2 divide-gray-200">
-            { footerCopyright.slogan.map((slogan, index) => <Paragraph accentColor="gray-light">{ slogan }</Paragraph> )}
+            { footerCopyright.slogan.map((slogan, index) => <Paragraph key={index} accentColor="gray-light">{ slogan }</Paragraph> )}
             </div>
 
             <div className="flex flex-col">
