@@ -10,7 +10,7 @@ export const footerCopyright = {
 
 export const footerSocials: ISocial[] = [
   {
-    href: 'https://www.youtube.com/user/academiaivaobr',
+    href: 'https://www.youtube.com/@drclaudiomutti2461?sub_confirmation=1',
     icon: <YoutubeLogo size={24} />,
   },
   {
