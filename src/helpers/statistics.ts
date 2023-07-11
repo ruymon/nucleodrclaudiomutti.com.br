@@ -2,11 +2,11 @@ import { IStatistics } from "@/@types/statistics";
 
 export const statistics: IStatistics = [
   {
-    value: "14 +",
+    value: "35 +",
     label: "Anos de experiência"
   },
   {
-    value: "9K +",
+    value: "20K +",
     label: "Pacientes atendidos"
   },
   {

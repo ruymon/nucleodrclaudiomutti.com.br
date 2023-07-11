@@ -10,7 +10,7 @@ interface SocialMediaIconButtonProps extends Omit<AnchorHTMLAttributes<HTMLAncho
 
 export function SocialMediaIconButton({icon, variant, size = 'icon', href, ...props}: SocialMediaIconButtonProps) {
   return (
-    <Link href={href} {...props}>
+    <Link href={href} {...props} target="_blank" rel="noopener">
       <Button size={size} variant={variant}>
         { icon }
       </Button>
