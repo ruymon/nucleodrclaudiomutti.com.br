@@ -39,7 +39,7 @@ export function HeroSection({}: HeroSectionProps) {
           width={500} 
           height={750}
           className="h-full w-full object-cover rounded-b-3xl"
-          src="/images/hero-banner-alt.jpg" 
+          src="/images/hero-banner.jpg" 
           alt="Hero Banner"
         />
       </figure>
