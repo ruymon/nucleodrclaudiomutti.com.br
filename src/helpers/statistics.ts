@@ -2,19 +2,15 @@ import { IStatistics } from "@/@types/statistics";
 
 export const statistics: IStatistics = [
   {
-    value: "10+",
+    value: "14 +",
     label: "Anos de experiência"
   },
   {
-    value: "100+",
-    label: "Projetos concluídos"
+    value: "9K +",
+    label: "Pacientes atendidos"
   },
   {
-    value: "100%",
-    label: "Satisfação do cliente"
-  },
-  {
-    value: "24/7",
-    label: "Suporte online"
+    value: "5/5",
+    label: "Excelência no atendimento"
   }
 ];

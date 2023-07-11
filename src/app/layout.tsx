@@ -19,8 +19,9 @@ const kalamFont = Kalam({
 });
 
 export const metadata = {
-  title: 'Núcleo Dr Claudio Mutti',
-  description: 'Clínica em São Paulo especializada em proporcionar bem-estar e longevidade de forma personalizada e humanizada.',
+  title: 'Núcleo Dr Claudio Mutti - Clínica de Saúde em São Paulo | Bem-Estar e Longevidade',
+  description: 'Descubra uma abordagem personalizada para o bem-estar e longevidade na Núcleo Dr Claudio Mutti. Especialistas em emagrecimento, hipertrofia, reposição hormonal e muito mais. Cuide da sua aparência sem comprometer a saúde. Agende sua consulta hoje mesmo!',
+
 }
 
 export default function RootLayout({

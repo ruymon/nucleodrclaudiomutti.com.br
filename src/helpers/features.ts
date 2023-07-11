@@ -15,22 +15,14 @@ export const features: IFeatures = [
   },
   {
     title: "Problemas intestinais",
-    description: "Cuide do seu intestino, órgão essencial para a absorção de nutrientes e proteção imunológica. Promova uma boa digestão e absorção adequada dos alimentos."
+    description: 'Cuide do seu "segundo cerebro", órgão que além da função de absorção de nutrientes, tem influência nas emoções, sono, comportamento e condições mentais.'
   },
   {
     title: "Reposição hormonal",
-    description: "Realize a reposição hormonal de forma segura, com diferentes métodos como aplicação transdérmica, uso de mucosas, injeções intramusculares ou implantes hormonais."
+    description: "Realizada a reposição hormonal de forma segura e quando bem indicada, com diferentes métodos como aplicação transdérmica, injeções intramusculares ou implantes hormonais."
   },
   {
-    title: "Nutrição esportiva",
-    description: "Melhore sua performance física, acelere a recuperação muscular e ajuste sua nutrição adequada ao exercício praticado, evitando desgaste e desequilíbrios."
+    title: "Nutrição esportiva e estética",
+    description: "Melhore sua performance física, acelere a recuperação muscular e ajuste sua nutrição mantendo a qualidade da pele e colágeno com a ingestão correta de nutrientes."
   },
-  {
-    title: "Nutrição estética",
-    description: "Mantenha massa magra, qualidade da pele e colágeno com aporte correto de nutrientes. Cuide da sua aparência sem comprometer a saúde."
-  },
-  {
-    title: "Nutrição para crianças e adolescentes",
-    description: "Eduque e conscientize crianças e adolescentes sobre saúde e nutrição para um desenvolvimento saudável e conhecimentos duradouros."
-  }
 ];
