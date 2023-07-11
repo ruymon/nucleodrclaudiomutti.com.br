@@ -11,7 +11,7 @@ const buttonVariants = cva(
         default: "bg-amber-700 text-gray-100 hover:bg-amber-800 focus-visible:ring-amber-700/30",
         destructive: "bg-red-700 text-gray-100 hover:bg-red-800 focus-visible:ring-red-700/30",
         outline: "border border-gray-400 text-gray-600 bg-inherit hover:bg-gray-800 hover:border-gray-800 hover:text-gray-100 focus-visible:ring-gray-200",
-        outlineWhite: "border border-gray-100 text-gray-100 bg-transparent hover:bg-amber-800  hover:border-amber-800 focus-visible:ring-amber-800/30",
+        outlineWhite: "border border-gray-100 text-gray-100 bg-transparent hover:bg-gray-800 hover:border-gray-800 hover:text-gray-100 focus-visible:ring-gray-200",
         outlineDim: "border border-gray-300 text-gray-400 bg-inherit hover:bg-gray-100 hover:text-gray-600 focus-visible:ring-gray-200",
         link: "text-amber-700 hover:text-amber-800 focus-visible:ring-amber-700/30",
       },
