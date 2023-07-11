@@ -16,7 +16,7 @@ export function HeroSection({}: HeroSectionProps) {
         <div className="flex flex-col gap-4 lg:gap-6">
           <Paragraph variant="hat" accentColor="brand" className="flex items-center gap-2 justify-center lg:justify-start">
             <Image width={16} height={16} src={wavingHand} alt="Mão acenando"/>
-            BOAS-VINDAS AO NÚCLEO CLAUDIO MUTTI
+            BOAS-VINDAS AO NÚCLEO PROF. DR. CLAUDIO MUTTI
           </Paragraph>
           <Heading as="h1" fontWeight="extrabold">Sua melhor versão começa agora!</Heading>
           <Paragraph size="large" accentColor="gray-light">Nossa metodologia vai além dos sintomas, atendemos de forma personalizada em busca de proporcionar bem-estar e longevidade.</Paragraph>

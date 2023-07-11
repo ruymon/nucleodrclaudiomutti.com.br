@@ -5,7 +5,8 @@ import { CURRENT_YEAR } from "@/constants/date";
 export const footerCopyright = {
   copyright: `\u00A9 ${CURRENT_YEAR} - Núcleo Dr. Claudio Mutti`,
   representative: "Responsável Técnico: Dr. Claudio Mutti - CRM 59687/SP",
-  rights: "Todos os direitos reservados."
+  rights: "Todos os direitos reservados.",
+  slogan: ["Saúde", "Qualidade de vida", "Estética", "Tratamento capilar"]
 }
 
 export const footerSocials: ISocial[] = [
