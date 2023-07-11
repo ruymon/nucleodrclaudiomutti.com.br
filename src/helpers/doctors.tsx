@@ -11,15 +11,15 @@ export const doctors: IDoctor[] = [
     social: [
       {
         href: "https://www.facebook.com/claudio.mutti.967",
-        icon: <FacebookLogo size={24} />
+        icon: <FacebookLogo size={28} />
       },
       {
         href: "https://www.instagram.com/drclaudiomutti/",
-        icon: <InstagramLogo size={24} />
+        icon: <InstagramLogo size={28} />
       },
       {
         href: "https://www.youtube.com/@drclaudiomutti2461?sub_confirmation=1",
-        icon: <YoutubeLogo size={24} />
+        icon: <YoutubeLogo size={28} />
       }
     ]
   },
@@ -32,7 +32,7 @@ export const doctors: IDoctor[] = [
     social: [
       {
         href: "https://www.instagram.com/drmarcelo.lima/",
-        icon: <InstagramLogo size={24} />
+        icon: <InstagramLogo size={28} />
       }
     ]
   }
