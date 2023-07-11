@@ -2,7 +2,7 @@ import { ISocial } from "@/@types/generic";
 import { FacebookLogo, InstagramLogo, YoutubeLogo } from "@/assets/Icons";
 import { CURRENT_YEAR } from "@/constants/date";
 
-export const footerCopyright: {
+export const footerCopyright = {
   copyright: `&copy; ${CURRENT_YEAR} - Núcleo Dr. Claudio Mutti`,
   representative: "Responsável Técnico: Dr. Claudio Mutti - CRM 59687/SP",
   rights: "Todos os direitos reservados."
