@@ -1,5 +1,5 @@
 import { IDoctor } from "@/@types/doctors";
-import { FacebookLogo, InstagramLogo } from "@/assets/Icons";
+import { FacebookLogo, InstagramLogo, YoutubeLogo } from "@/assets/Icons";
 
 export const doctors: IDoctor[] = [
   {
@@ -10,12 +10,16 @@ export const doctors: IDoctor[] = [
     image: "/doctor-claudio.jpeg",
     social: [
       {
-        href: "#",
+        href: "https://www.facebook.com/claudio.mutti.967",
         icon: <FacebookLogo size={24} />
       },
       {
-        href: "#",
+        href: "https://www.instagram.com/drclaudiomutti/",
         icon: <InstagramLogo size={24} />
+      },
+      {
+        href: "https://www.youtube.com/@drclaudiomutti2461?sub_confirmation=1",
+        icon: <YoutubeLogo size={24} />
       }
     ]
   },
@@ -27,11 +31,7 @@ export const doctors: IDoctor[] = [
     image: "/doctor-marcelo.jpeg",
     social: [
       {
-        href: "#",
-        icon: <FacebookLogo size={24} />
-      },
-      {
-        href: "#",
+        href: "https://www.instagram.com/drmarcelo.lima/",
         icon: <InstagramLogo size={24} />
       }
     ]

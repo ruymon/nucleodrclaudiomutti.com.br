@@ -3,7 +3,7 @@ import { FacebookLogo, InstagramLogo, YoutubeLogo } from "@/assets/Icons";
 import { CURRENT_YEAR } from "@/constants/date";
 
 export const footerCopyright = {
-  copyright: `&copy; ${CURRENT_YEAR} - Núcleo Dr. Claudio Mutti`,
+  copyright: `\u00A9 ${CURRENT_YEAR} - Núcleo Dr. Claudio Mutti`,
   representative: "Responsável Técnico: Dr. Claudio Mutti - CRM 59687/SP",
   rights: "Todos os direitos reservados."
 }
@@ -14,11 +14,11 @@ export const footerSocials: ISocial[] = [
     icon: <YoutubeLogo size={24} />,
   },
   {
-    href: 'https://www.instagram.com/ivao_br',
+    href: "https://www.instagram.com/nucleodrclaudiomutti/",
     icon: <InstagramLogo size={24} />,
   },
   {
-    href: 'https://www.facebook.com/IVAOBR',
+    href: 'https://www.facebook.com/people/Dr-Claudio-Mutti/100075382197585/',
     icon: <FacebookLogo size={24} />,
   }
 ];
