@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Heading } from "./Heading";
 import { Paragraph } from "./Paragraph";
 import { SocialMediaIconButton } from "./SocialMediaIconButton";
-import Balancer from 'react-wrap-balancer';
 
 interface DoctorGreetCardProps extends IDoctor {
   hat?: string;
@@ -30,10 +29,8 @@ export function DoctorGreetCard({ hat = 'SOBRE', name, description, image, speci
             <Heading as="h2" fontWeight="extrabold">{name}</Heading>
           </div>
 
-          <Paragraph size="large" accentColor="gray-light" className="xl:max-w-[90%]">
-            <Balancer>
-              {description}
-            </Balancer>
+          <Paragraph size="large" accentColor="gray-light" className="xl:max-w-[90%] text-justify">
+            {description}
           </Paragraph>
 
           <div className="flex items-center gap-3">
