@@ -36,11 +36,11 @@ export function HeroSection({}: HeroSectionProps) {
 
       <figure className="hidden lg:flex w-full h-[90%] max-w-[40%]">
         <Image 
-          width={1161} 
-          height={80}
+          width={1920} 
+          height={1280}
           className="h-full w-full object-cover object-right rounded-b-3xl"
-          src="https://images.unsplash.com/photo-1631248055158-edec7a3c072b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-          alt="Banner" 
+          src="/images/hero-banner.jpg" 
+          alt="Hero Banner"
         />
       </figure>
     </section>
