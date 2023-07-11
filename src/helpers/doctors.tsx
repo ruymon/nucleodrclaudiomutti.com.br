@@ -6,7 +6,7 @@ export const doctors: IDoctor[] = [
     name: "Dr. Claudio Mutti",
     registration: "CRM 59687/SP",
     specialty: ["Nutrologia"],
-    description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+    description: "Olá! Sou o Dr. Claudio Mutti, médico formado pela UNIVAS com mais de três décadas de experiência na área da saúde. Após meus vários anos de atendimentos, decidi fundar o meu próprio núcleo, com um único objetivo: Ajudar você a se sentir bem, com longevidade e bem-estar estético. Para isso, desenvolvi uma metodologia personalizada e centrada no paciente para potencializar seus resultados, atendendo sempre com excelência! Por fim, não deixe de me acompanhar nas minhas redes sociais! Diariamente compartilho dicas para te ajudar a harmonizar uma alimentação saudável e a adoção de bons hábitos.",
     image: "/images/doctors/doctor-claudio.jpeg",
     social: [
       {
