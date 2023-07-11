@@ -3,12 +3,12 @@ import { VariantProps, cva } from "class-variance-authority";
 import { HTMLAttributes, ReactNode } from "react";
 
 const headingVariants = cva(
-  "tracking-tight",
+  "",
   {
     variants: {
       variant: {
-        h1: "text-5xl lg:text-6xl lg:leading-tight",
-        h2: "text-3xl lg:text-4xl lg:!leading-snug",
+        h1: "text-6xl lg:text-7xl",
+        h2: "text-4xl lg:text-5xl",
         h3: "text-2xl",
         span: "",
       },
