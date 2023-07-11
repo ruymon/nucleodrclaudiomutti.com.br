@@ -13,9 +13,9 @@ const logoVariants = cva(
         white: "text-white",
       },
       size: {
-        default: "h-9",
+        default: "h-10",
         sm: "h-6",
-        lg: "h-11",
+        lg: "h-12",
       },
     },
     defaultVariants: {
