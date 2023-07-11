@@ -13,7 +13,7 @@ export function HeroSection({}: HeroSectionProps) {
   return (
     <section id="hero" className="wrapper h-fit py-20 lg:py-0 lg:h-[calc(100vh-4rem)] items-center lg:items-start flex lg:justify-between lg:gap-16">
       <aside className="h-full justify-center flex flex-col gap-16 w-full grow text-center items-center lg:text-left lg:items-start">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 lg:gap-6">
           <Paragraph variant="hat" accentColor="brand" className="flex items-center gap-2 justify-center lg:justify-start">
             <Image width={16} height={16} src={wavingHand} alt="Mão acenando"/>
             BOAS-VINDAS AO NÚCLEO CLAUDIO MUTTI
