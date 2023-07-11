@@ -14,7 +14,7 @@ export const contact = [
   },
   {
     label: "Telefone",
-    value: general.phone,
+    value: `${general.landlines[0]} | ${general.landlines[1]}`,
     icon: <Phone size={18}/>
   }
 ];
