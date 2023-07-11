@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { type HTMLProps } from "react";
 
 const logoVariants = cva(
-  'shrink-0',
+  'shrink-0 w-fit',
   {
     variants: {
       variant: {
