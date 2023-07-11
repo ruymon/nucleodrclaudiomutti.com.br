@@ -27,7 +27,7 @@ export const doctors: IDoctor[] = [
     name: "Dr. Marcelo Lima",
     registration: "CRM 206295/SP",
     specialty: ["Obesidade", "Sarcopenia"],
-    description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+    description: "Olá! Sou o Dr. Marcelo Lima, médico formado pela Universidade Nove de Julho, com anos de experiência em diversas áreas da medicina. Meu foco é ajudar meus pacientes a alcançarem uma vida saudável e equilibrada. Como especialista em emagrecimento e longevidade, busquei aprimorar meus conhecimentos nas áreas de bem-estar e medicina integrativa, esportiva, modulação hormonal e hipertrofia. Estou sempre atualizado com as tendências mais modernas da medicina para oferecer os melhores cuidados aos meus pacientes. Além do meu trabalho clínico, compartilho regularmente dicas e orientações valiosas em minhas redes sociais, fique por dentro.",
     image: "/images/doctors/doctor-marcelo.jpeg",
     social: [
       {
