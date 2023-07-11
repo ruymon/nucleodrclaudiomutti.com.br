@@ -1,5 +1,5 @@
 import { CURRENT_YEAR } from "@/constants/date";
-import { footerSocials } from "@/helpers/footer";
+import { footerSocials, footerCopyright } from "@/helpers/footer";
 import { Logo } from "../brand/Logo";
 import { Paragraph } from "./Paragraph";
 import { SocialMediaIconButton } from "./SocialMediaIconButton";
@@ -16,8 +16,9 @@ export function Footer({}: FooterProps) {
             <Logo size="lg" />
 
             <div className="flex flex-col">
-              <Paragraph accentColor="gray-light">&copy; {CURRENT_YEAR} - Núcleo Dr. Claudio Mutti</Paragraph>
-              <Paragraph accentColor="gray-light" size="small">Todos os direitos reservados.</Paragraph>
+              <Paragraph accentColor="gray-light">{ footerCopyright.copyright }</Paragraph>
+              <Paragraph accentColor="gray-light" size="small">{ footerCopyright.representative }</Paragraph>
+              <Paragraph accentColor="gray-light" size="small">{ footerCopyright.rights }</Paragraph>
             </div>
           </div>
 
