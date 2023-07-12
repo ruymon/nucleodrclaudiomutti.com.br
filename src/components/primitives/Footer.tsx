@@ -1,5 +1,4 @@
-import { CURRENT_YEAR } from "@/constants/date";
-import { footerSocials, footerCopyright } from "@/helpers/footer";
+import { footerCopyright, footerSocials } from "@/helpers/footer";
 import { Logo } from "../brand/Logo";
 import { Paragraph } from "./Paragraph";
 import { SocialMediaIconButton } from "./SocialMediaIconButton";
@@ -16,7 +15,7 @@ export function Footer({}: FooterProps) {
             <Logo size="lg" />
 
             <div className="flex items-center divide-x-2 divide-gray-200">
-            { footerCopyright.slogan.map((slogan, index) => <Paragraph key={index} accentColor="gray-light">{ slogan }</Paragraph> )}
+            { footerCopyright.slogan.map((slogan, index) => <Paragraph key={index} accentColor="gray-light" className="px-4 first:pr-4 first:pl-0 last:pl-4 last:pr-0">{ slogan }</Paragraph> )}
             </div>
 
             <div className="flex flex-col">

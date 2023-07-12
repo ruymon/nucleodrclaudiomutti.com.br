@@ -1,5 +1,6 @@
 import { Footer } from '@/components/primitives/Footer';
 import { Navbar } from '@/components/primitives/Navbar';
+import { Analytics } from '@vercel/analytics/react';
 import { DM_Sans, Kalam } from 'next/font/google';
 import { ReactNode } from 'react';
 import './globals.css';
@@ -38,7 +39,8 @@ export default function RootLayout({
       
       <body>
         <Navbar />
-        {children}
+          {children}
+          <Analytics />
         <Footer />
       </body>
     </html>
