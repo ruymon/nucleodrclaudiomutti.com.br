@@ -1,5 +1,6 @@
 import { footerCopyright, footerSocials } from "@/helpers/footer";
 import { Logo } from "../brand/Logo";
+import { Heading } from "./Heading";
 import { Paragraph } from "./Paragraph";
 import { SocialMediaIconButton } from "./SocialMediaIconButton";
 
@@ -14,14 +15,26 @@ export function Footer({}: FooterProps) {
           <div className="flex flex-col gap-6">
             <Logo size="lg" />
 
-            <div className="flex items-center divide-x-2 divide-gray-200">
-            { footerCopyright.slogan.map((slogan, index) => <Paragraph key={index} accentColor="gray-light" className="px-4 first:pr-4 first:pl-0 last:pl-4 last:pr-0">{ slogan }</Paragraph> )}
+            <div className="flex items-center divide-x divide-gray-300">
+            { footerCopyright.brandPillars.map((pillar, index) => {
+              return (
+                <Heading 
+                  key={index} 
+                  accentColor="gray-light"
+                  fontWeight="medium"
+                  as="h4"
+                  className="px-4 first:pr-4 first:pl-0 last:pl-4 last:pr-0"
+                >{ pillar }</Heading>
+              )
+            })}
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-2">
               <Paragraph accentColor="gray-light">{ footerCopyright.copyright }</Paragraph>
-              <Paragraph accentColor="gray-light" size="small">{ footerCopyright.representative }</Paragraph>
-              <Paragraph accentColor="gray-light" size="small">{ footerCopyright.rights }</Paragraph>
+              <div className="flex flex-col">
+                <Paragraph accentColor="gray-light" size="small">{ footerCopyright.representative }</Paragraph>
+                <Paragraph accentColor="gray-light" size="small">{ footerCopyright.rights }</Paragraph>
+              </div>
             </div>
           </div>
 

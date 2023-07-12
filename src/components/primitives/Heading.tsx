@@ -10,6 +10,7 @@ const headingVariants = cva(
         h1: "text-5xl lg:text-6xl",
         h2: "text-3xl lg:text-4xl",
         h3: "text-2xl",
+        h4: "text-lg",
         span: "",
       },
       accentColor: {
@@ -35,7 +36,7 @@ const headingVariants = cva(
 
 interface HeadingProps extends HTMLAttributes<HTMLSpanElement>, VariantProps<typeof headingVariants> {
   children: ReactNode;
-  as?: 'h1' | 'h2' | 'h3' | 'span';
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'span';
 };
 
 export function Heading({ variant, accentColor, fontWeight, className, as: Component = 'h2', ...props }: HeadingProps) {

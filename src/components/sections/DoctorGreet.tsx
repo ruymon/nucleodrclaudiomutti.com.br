@@ -1,13 +1,15 @@
 "use client";
 
-import { CaretLeft, CaretRight } from "@/assets/Icons";
-import { doctors } from "@/helpers/doctors";
-import { cn } from "@/lib/utils";
+import { CaretLeft, CaretRight } from '@/assets/Icons';
+import { doctors } from '@/helpers/doctors';
+import { cn } from '@/lib/utils';
 import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
-import { useState } from "react";
-import { Button } from "../primitives/Button";
-import { DoctorGreetCard } from "../primitives/DoctorGreetCard";
+import { useEffect, useState } from "react";
+import { Button } from '../primitives/Button';
+import { DoctorGreetCard } from '../primitives/DoctorGreetCard';
+import { DoctorGreetCardSkeleton } from '../skeletons/DoctorGreetCardSkeleton';
+// import { DoctorGreetCardSkeleton } from '../skeletons/DoctorGreetCardSkeleton';
 
 
 interface DoctorGreetSectionProps {};
@@ -16,17 +18,33 @@ interface DoctorGreetSectionProps {};
 
 export function DoctorGreetSection({}: DoctorGreetSectionProps) {
   const [isAtBeginning, setIsAtBeginning] = useState(true);
+  const [isSliderLoading, setIsSliderLoading] = useState(true);
 
+  useEffect(() => {
+    console.log('Slider loading', isSliderLoading);
+  }, [isSliderLoading])
 
   const [ref, slider] = useKeenSlider<HTMLDivElement>({
     slides: { spacing: 64 },
     defaultAnimation: {
       duration: 1000
     },
-    slideChanged(e) {
+    created(slider) {
+      console.log('Slider created', slider);
+      setIsSliderLoading(false);
+    },
+    slideChanged() {
       setIsAtBeginning(slider?.current?.track.distToIdx(0) === 0);
     }
   }, []);
+
+  if (isSliderLoading) {
+    return (
+      <section id="greet" className="wrapper xl:relative flex flex-col gap-8 mt-28">
+        <DoctorGreetCardSkeleton />
+      </section>
+    )
+  };
 
   return (
     <section id="greet" className="wrapper xl:relative flex flex-col gap-8 mt-28">
@@ -58,7 +76,6 @@ export function DoctorGreetSection({}: DoctorGreetSectionProps) {
         <div className={cn("w-1.5 h-1.5 rounded-full", isAtBeginning ? 'bg-gray-400' : 'bg-gray-200')}></div>
         <div className={cn("w-1.5 h-1.5 rounded-full", isAtBeginning ? 'bg-gray-200' : 'bg-gray-400')}></div>
       </div>
-
     </section>
   );
 };

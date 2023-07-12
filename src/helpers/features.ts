@@ -11,11 +11,11 @@ export const features: IFeatures = [
   },
   {
     title: "Cansaço e falta de energia",
-    description: "Regule seus hábitos para combater o cansaço relacionado a deficiências nutricionais, desequilíbrios hormonais, problemas emocionais e distúrbios do sono."
+    description: "Primeiro descobrimos as  características nutricionais, hormonais, emocionais e sono, e logo após iniciamos a correção de cada deficiência"
   },
   {
     title: "Problemas intestinais",
-    description: 'Cuide do seu "segundo cerebro", órgão que além da função de absorção de nutrientes, tem influência nas emoções, sono, comportamento e condições mentais.'
+    description: 'Cuide do seu "segundo cérebro", órgão que além da função de absorção de nutrientes, tem influência nas emoções, sono, comportamento e condições mentais.'
   },
   {
     title: "Reposição hormonal",

@@ -14,6 +14,7 @@ export function DoctorGreetCard({ hat = 'SOBRE', name, description, image, speci
       <figure className="w-full h-64 lg:h-auto lg:max-w-sm relative">
         <Image
           fill
+          sizes="(min-width: 1200px) 24rem, 100vw"
           className="object-cover rounded-xl h-full w-full"
           src={image}
           alt={`Foto do ${name}`}

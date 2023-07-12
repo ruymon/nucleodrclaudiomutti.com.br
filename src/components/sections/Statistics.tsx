@@ -1,5 +1,3 @@
-"use client";
-
 import { statistics } from "@/helpers/statistics";
 import { StatisticsItem } from "../primitives/StatisticsItem";
 

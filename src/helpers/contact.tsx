@@ -1,6 +1,7 @@
 import { EnvelopeSimple, MapPin, Phone } from "@/assets/Icons";
 import { general } from "./general";
 
+// TODO - Use semantic HTML when consuming this data
 export const contact = [
   {
     label: "Endereço",

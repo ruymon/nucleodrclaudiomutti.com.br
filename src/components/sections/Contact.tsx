@@ -1,5 +1,3 @@
-"use client";
-
 import { contact } from "@/helpers/contact";
 import { Button } from "../primitives/Button";
 import { Heading } from "../primitives/Heading";
