@@ -1,4 +1,4 @@
-/*
+/**
 * Register protocol API wrapper. 
 * Use this hook to expand the interactivity on anchor tags. 
 *
