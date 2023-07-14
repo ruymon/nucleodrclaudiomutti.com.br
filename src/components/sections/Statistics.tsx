@@ -1,5 +1,5 @@
 import { statistics } from "@/helpers/statistics";
-import { StatisticsItem } from "../primitives/StatisticsItem";
+import { StatisticsItem } from "../compositions/StatisticsItem";
 
 interface StatisticsSectionProps {};
 

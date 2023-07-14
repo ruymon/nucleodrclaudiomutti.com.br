@@ -1,5 +1,5 @@
-import { Footer } from '@/components/primitives/Footer';
-import { Navbar } from '@/components/primitives/Navbar';
+import { Footer } from '@/components/compositions/Footer';
+import { Navbar } from '@/components/compositions/Navbar';
 import { Analytics } from '@vercel/analytics/react';
 import { DM_Sans, Kalam } from 'next/font/google';
 import { ReactNode } from 'react';

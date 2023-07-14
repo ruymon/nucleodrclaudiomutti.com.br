@@ -1,11 +1,10 @@
-import { Heading } from "./Heading";
-import { Paragraph } from "./Paragraph";
+import { Heading } from "../primitives/Heading";
+import { Paragraph } from "../primitives/Paragraph";
 
 interface StatisticsItemProps {
   value: string;
   label: string;
 };
-
 
 export function StatisticsItem({ value, label }: StatisticsItemProps) {
   return (
@@ -15,3 +14,4 @@ export function StatisticsItem({ value, label }: StatisticsItemProps) {
     </div>
   );
 };
+

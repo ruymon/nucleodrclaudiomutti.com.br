@@ -1,6 +1,6 @@
 import Link, { LinkProps } from "next/link";
 import { AnchorHTMLAttributes, ReactNode } from "react";
-import { Button, IButtonSizes, IButtonVariants, } from "./Button";
+import { Button, IButtonSizes, IButtonVariants, } from "../primitives/Button";
 
 interface SocialMediaIconButtonProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof LinkProps>, LinkProps {
   icon: ReactNode;

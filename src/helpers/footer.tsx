@@ -1,6 +1,6 @@
 import { IFooterCopyright } from "@/@types/footer";
 import { ISocial } from "@/@types/generic";
-import { FacebookLogo, InstagramLogo, YoutubeLogo } from "@/assets/Icons";
+import { FacebookLogo, InstagramLogo, YoutubeLogo } from "@/assets/phosphor";
 import { CURRENT_YEAR } from "@/constants/date";
 
 export const footerCopyright: IFooterCopyright = {

@@ -1,10 +1,10 @@
 import { IFeatureItem } from "@/@types/features";
-import { Check } from "@/assets/Icons";
-import { Heading } from "./Heading";
-import { Paragraph } from "./Paragraph";
+import { Check } from "@/assets/phosphor";
+import { Heading } from "../primitives/Heading";
+import { Paragraph } from "../primitives/Paragraph";
 
 interface FeatureCardProps extends IFeatureItem {};
-
+// TODO: Rename this to SpecialtyCard
 export function FeatureCard({ title, description }: FeatureCardProps) {
   return (
     <div className="w-full flex flex-col gap-6 p-6 border rounded-xl bg-white border-gray-100 h-fit ">

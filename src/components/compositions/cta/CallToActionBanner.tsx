@@ -1,8 +1,8 @@
 import { type ICallToActionItem } from "@/@types/callToAction";
 import stethoscopeEmoji from "@/assets/emojis/stethoscope-emoji.png";
+import { Heading } from "@/components/primitives/Heading";
+import { Paragraph } from "@/components/primitives/Paragraph";
 import Image from "next/image";
-import { Heading } from "./Heading";
-import { Paragraph } from "./Paragraph";
 
 type CallToActionBannerProps = ICallToActionItem;
 

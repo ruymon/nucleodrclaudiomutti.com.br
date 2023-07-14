@@ -1,5 +1,5 @@
 import { IDoctor } from "@/@types/doctors";
-import { FacebookLogo, InstagramLogo, YoutubeLogo } from "@/assets/Icons";
+import { FacebookLogo, InstagramLogo, YoutubeLogo } from "@/assets/phosphor";
 
 export const doctors: IDoctor[] = [
   {

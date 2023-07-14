@@ -1,19 +1,11 @@
 import { Skeleton } from "../primitives/Skeleton";
 
-<div className="flex items-center space-x-4">
-  <Skeleton className="h-12 w-12 rounded-full" />
-  <div className="space-y-2">
-    <Skeleton className="h-4 w-[250px]" />
-    <Skeleton className="h-4 w-[200px]" />
-  </div>
-</div>
-
 export function DoctorGreetCardSkeleton() {
   return (
     <div className="w-full flex flex-col lg:flex-row gap-8 lg:gap-16">
       <Skeleton className="w-full h-64 lg:h-auto lg:max-w-sm" />
 
-      <aside className="flex-1 flex flex-col gap-8 lg:pb-3">
+      <div className="flex-1 flex flex-col gap-8 lg:pb-3">
         <Skeleton className="w-1/6 h-4" />
 
         <div className="flex flex-col gap-6 w-full">
@@ -35,7 +27,7 @@ export function DoctorGreetCardSkeleton() {
             <Skeleton className="w-10 aspect-square" />
           </div>
         </div>
-      </aside>
+      </div>
     </div>
   );
 };

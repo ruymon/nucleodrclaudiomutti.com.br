@@ -1,6 +1,6 @@
-import { CaretDoubleDown, WhatsappLogo } from "@/assets/Icons";
 import wavingHandEmoji from "@/assets/emojis/waving-hand-emoji.png";
 import bannerImage from '@/assets/hero-banner.webp';
+import { CaretDoubleDown, WhatsappLogo } from "@/assets/phosphor";
 import { heroContent } from "@/helpers/hero";
 import Image from "next/image";
 import { Button } from "../primitives/Button";
@@ -16,7 +16,7 @@ export function HeroSection({}: HeroSectionProps) {
     <section id="hero" className="wrapper h-fit py-20 lg:py-0 lg:h-[calc(100vh-4rem)] items-center lg:items-start flex lg:justify-between lg:gap-16">
       <aside className="h-full justify-center flex flex-col gap-16 w-full grow text-center items-center lg:text-left lg:items-start">
         <div className="flex flex-col gap-4 lg:gap-6">
-          <Paragraph variant="hat" accentColor="brand" className="flex items-center gap-2 justify-center lg:justify-start">
+          <Paragraph variant="hat" accentColor="brand" className="flex flex-col sm:flex-row items-center gap-2 justify-center lg:justify-start">
             <Image width={16} height={16} src={wavingHandEmoji} alt="Mão acenando"/>
             {hat}
           </Paragraph>
@@ -30,6 +30,7 @@ export function HeroSection({}: HeroSectionProps) {
             AGENDE SUA CONSULTA
           </Button>
           <Button variant="link">
+            {/* TODO Scroll to next section */}
             SAIBA MAIS
             <CaretDoubleDown size={14} />
           </Button>

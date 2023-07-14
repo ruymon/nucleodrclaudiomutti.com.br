@@ -1,7 +1,7 @@
 import { IDoctor } from "@/@types/doctors";
 import Image from "next/image";
-import { Heading } from "./Heading";
-import { Paragraph } from "./Paragraph";
+import { Heading } from "../primitives/Heading";
+import { Paragraph } from "../primitives/Paragraph";
 import { SocialMediaIconButton } from "./SocialMediaIconButton";
 
 interface DoctorGreetCardProps extends IDoctor {

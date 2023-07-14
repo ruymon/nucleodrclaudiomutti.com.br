@@ -1,81 +1,70 @@
 "use client";
 
-import { CaretLeft, CaretRight } from '@/assets/Icons';
 import { doctors } from '@/helpers/doctors';
-import { cn } from '@/lib/utils';
 import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
-import { useEffect, useState } from "react";
-import { Button } from '../primitives/Button';
-import { DoctorGreetCard } from '../primitives/DoctorGreetCard';
+import { useState } from "react";
+import { DoctorGreetCard } from '../compositions/DoctorGreetCard';
+import { SliderArrowButton } from '../compositions/slider/SliderArrowButton';
+import { ProgressDot } from '../primitives/ProgressDot';
 import { DoctorGreetCardSkeleton } from '../skeletons/DoctorGreetCardSkeleton';
-// import { DoctorGreetCardSkeleton } from '../skeletons/DoctorGreetCardSkeleton';
 
 
 interface DoctorGreetSectionProps {};
 
-// TODO Refactor this component
-
 export function DoctorGreetSection({}: DoctorGreetSectionProps) {
-  const [isAtBeginning, setIsAtBeginning] = useState(true);
-  const [isSliderLoading, setIsSliderLoading] = useState(true);
-
-  useEffect(() => {
-    console.log('Slider loading', isSliderLoading);
-  }, [isSliderLoading])
-
-  const [ref, slider] = useKeenSlider<HTMLDivElement>({
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isSliderReady, setIsSliderReady] = useState(false);
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+    initial: 0,
     slides: { spacing: 64 },
-    defaultAnimation: {
-      duration: 1000
+    defaultAnimation: { duration: 1000 },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel)
     },
-    created(slider) {
-      console.log('Slider created', slider);
-      setIsSliderLoading(false);
+    created() {
+      setIsSliderReady(true)
     },
-    slideChanged() {
-      setIsAtBeginning(slider?.current?.track.distToIdx(0) === 0);
-    }
-  }, []);
-
-  if (isSliderLoading) {
-    return (
-      <section id="greet" className="wrapper xl:relative flex flex-col gap-8 mt-28">
-        <DoctorGreetCardSkeleton />
-      </section>
-    )
-  };
+  });
 
   return (
     <section id="greet" className="wrapper xl:relative flex flex-col gap-8 mt-28">
-      <div className="xl:absolute xl:wrapper flex items-center gap-2 xl:gap-0 xl:justify-between bg-transparent xl:pointer-events-none xl:z-10 xl:inset-0">
-        <Button
-          size="icon"
-          onClick={() => slider.current?.prev()}
-          disabled={isAtBeginning}
-          className="xl:pointer-events-auto xl:-ml-6"
-        >
-          <CaretLeft className="xl:w-7 xl:h-7 w-4" />
-        </Button>
+      {isSliderReady && instanceRef.current && (
+        <div className="xl:absolute xl:wrapper flex items-center gap-2 xl:gap-0 xl:justify-between bg-transparent xl:pointer-events-none xl:z-10 xl:inset-0">
+          <SliderArrowButton
+            variant="left"
+            onClick={(e: any) => e.stopPropagation() || instanceRef.current?.prev()}
+            disabled={currentSlide === 0}
+          />
 
-        <Button
-          size="icon"
-          onClick={() => slider.current?.next()}
-          disabled={!isAtBeginning}
-          className="xl:pointer-events-auto xl:-mr-6"
-        >
-          <CaretRight className="xl:w-7 xl:h-7 w-4" />
-        </Button>
-      </div>
+          <SliderArrowButton
+            variant="right"
+            onClick={(e: any) => e.stopPropagation() || instanceRef.current?.next()}
+            disabled={currentSlide === instanceRef.current.track.details.slides.length - 1}
+          />
+        </div>
+      )}
 
-      <div className="keen-slider" ref={ref}>
-        {doctors.map((doctor) => <DoctorGreetCard key={doctor.registration} {...doctor} />)}
-      </div>
+      {(isSliderReady && instanceRef.current) ? (
+        <div className="keen-slider" ref={sliderRef}>
+          {doctors.map((doctor) => <DoctorGreetCard key={doctor.registration} {...doctor} />)}
+        </div>
+      ) : <DoctorGreetCardSkeleton />}
 
-      <div className="flex items-center xl:self-center gap-2">
-        <div className={cn("w-1.5 h-1.5 rounded-full", isAtBeginning ? 'bg-gray-400' : 'bg-gray-200')}></div>
-        <div className={cn("w-1.5 h-1.5 rounded-full", isAtBeginning ? 'bg-gray-200' : 'bg-gray-400')}></div>
-      </div>
+
+      {isSliderReady && instanceRef.current && (
+        <div className="flex items-center xl:self-center gap-2">
+          {[...Array(instanceRef.current.track.details.slides.length).keys()].map((idx) => {
+            return (
+              <ProgressDot
+                key={idx}
+                variant={currentSlide === idx ? 'active' : 'default'}
+                onClick={() => instanceRef.current?.moveToIdx(idx)}
+              />
+            )
+          })}
+        </div>
+      )}
     </section>
   );
 };

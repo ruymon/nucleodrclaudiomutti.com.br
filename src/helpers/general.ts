@@ -8,3 +8,4 @@ export const general = {
 }
 
 // TODO: Feature to map the work times array and toast the user if wants to setup Appointment off that times.
+// TODO: Change Whatsapp API to have a text referring where the user came from.

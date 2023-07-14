@@ -1,5 +1,5 @@
 import { features } from "@/helpers/features";
-import { FeatureCard } from "../primitives/FeatureCard";
+import { FeatureCard } from "../compositions/FeatureCard";
 import { Heading } from "../primitives/Heading";
 import { Paragraph } from "../primitives/Paragraph";
 

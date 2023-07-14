@@ -1,5 +1,5 @@
 import { callToAction } from "@/helpers/callToAction";
-import { CallToActionBanner } from "../primitives/CallToActionBanner";
+import { CallToActionBanner } from "../compositions/cta/CallToActionBanner";
 
 interface CallToActionSectionProps {};
 
