@@ -1,28 +1,36 @@
+"use client";
+
 import { Logo } from "@/components/brand/Logo";
-import { Symbol } from "@/components/brand/Symbol";
-import { Button } from "@/components/primitives/Button";
 import { navbar } from "@/helpers/navbar";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import { ScheduleAppointmentButton } from "../ScheduleAppointmentButton";
 import { NavbarItem } from "./NavbarItem";
 
 interface NavbarProps {};
 
 export function Navbar({}: NavbarProps) {
-  return (
-    <header className="w-full z-20 sticky top-0 border-b border-gray-100 bg-white shadow-b">
-      <nav className="wrapper h-16 flex items-center justify-between">
-        <Logo className="hidden sm:flex" />
-        <Symbol className="flex sm:hidden" />
+  const { handleScroll } = useSmoothScroll();
 
-        <div className="gap-4 h-full hidden lg:flex">
-          { navbar.map(({ title, id }, i) => (
-            // TODO: Why is this ID needed?
-            <NavbarItem key={i}>
+  return (
+    <header className="w-full z-20 sticky top-0 border-b border-gray-100 bg-white shadow-b hidden lg:flex">
+      <nav className="wrapper h-16 flex items-center justify-between">
+        <Logo className="flex" />
+
+        <div className="gap-4 h-full flex">
+          {navbar.map(({ title, id, ...props }) => (
+            <NavbarItem
+              key={id}
+              onClick={handleScroll}
+              // TODO: Add current section isActive prop
+              // TODO: Constantly check current section and change color accordingly
+              {...props}
+            >
               {title}
             </NavbarItem>
           ))}
         </div>
 
-        <Button variant="outline" className="hidden sm:flex">AGENDAR CONSULTA</Button>
+        <ScheduleAppointmentButton variant="outline" className="flex">AGENDAR CONSULTA</ScheduleAppointmentButton>
       </nav>
     </header>
   );

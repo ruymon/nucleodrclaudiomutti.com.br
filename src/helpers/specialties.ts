@@ -1,6 +1,6 @@
-import { IFeatures } from "@/@types/features";
+import { ISpecialties } from "@/@types/specialties";
 
-export const features: IFeatures = [
+export const specialties: ISpecialties = [
   {
     title: "Emagrecimento",
     description: "Descubra os gatilhos que impedem seu emagrecimento. Nossa abordagem personalizada suplementa o necessário, garantindo qualidade de vida sem dietas restritivas."

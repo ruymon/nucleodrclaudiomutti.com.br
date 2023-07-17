@@ -1,8 +1,8 @@
 import { CallToActionSection } from "@/components/sections/CallToAction";
 import { ContactSection } from "@/components/sections/Contact";
 import { DoctorGreetSection } from "@/components/sections/DoctorGreet";
-import { FeaturesSection } from "@/components/sections/Features";
 import { HeroSection } from "@/components/sections/Hero";
+import { SpecialtiesSection } from "@/components/sections/Specialties";
 import { StatisticsSection } from "@/components/sections/Statistics";
 
 export default function Home() {
@@ -10,10 +10,10 @@ export default function Home() {
     <main className="w-full flex flex-col">
       <HeroSection />
       <StatisticsSection />
-      <FeaturesSection />
+      <SpecialtiesSection />
       <DoctorGreetSection />
       <CallToActionSection />
-      <ContactSection /> 
+      <ContactSection />
     </main>
   )
 }

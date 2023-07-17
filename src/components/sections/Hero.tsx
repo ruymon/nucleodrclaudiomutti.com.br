@@ -1,9 +1,9 @@
 import wavingHandEmoji from "@/assets/emojis/waving-hand-emoji.png";
 import bannerImage from '@/assets/hero-banner.webp';
-import { CaretDoubleDown, WhatsappLogo } from "@/assets/phosphor";
 import { heroContent } from "@/helpers/hero";
 import Image from "next/image";
-import { Button } from "../primitives/Button";
+import { KnowMoreButton } from "../compositions/KnowMoreButton";
+import { ScheduleAppointmentButton } from "../compositions/ScheduleAppointmentButton";
 import { Heading } from "../primitives/Heading";
 import { Paragraph } from "../primitives/Paragraph";
 
@@ -24,16 +24,9 @@ export function HeroSection({}: HeroSectionProps) {
           <Paragraph size="large" accentColor="gray-light">{subtitle}</Paragraph>
         </div>
         
-        <div className="flex items-center gap-4 flex-col sm:flex-row">
-          <Button size="lg">
-            <WhatsappLogo size={20} />
-            AGENDE SUA CONSULTA
-          </Button>
-          <Button variant="link">
-            {/* TODO Scroll to next section */}
-            SAIBA MAIS
-            <CaretDoubleDown size={14} />
-          </Button>
+        <div className="flex items-center gap-4 sm:gap-6 flex-col sm:flex-row">
+          <ScheduleAppointmentButton customLabel="Agende sua consulta" size="lg" hasWhatsappIcon />
+          <KnowMoreButton />
         </div>
       </aside>
 

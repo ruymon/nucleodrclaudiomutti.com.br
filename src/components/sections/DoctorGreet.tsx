@@ -7,7 +7,6 @@ import { useState } from "react";
 import { DoctorGreetCard } from '../compositions/DoctorGreetCard';
 import { SliderArrowButton } from '../compositions/slider/SliderArrowButton';
 import { ProgressDot } from '../primitives/ProgressDot';
-import { DoctorGreetCardSkeleton } from '../skeletons/DoctorGreetCardSkeleton';
 
 
 interface DoctorGreetSectionProps {};
@@ -28,7 +27,7 @@ export function DoctorGreetSection({}: DoctorGreetSectionProps) {
   });
 
   return (
-    <section id="greet" className="wrapper xl:relative flex flex-col gap-8 mt-28">
+    <section id="greet" className="wrapper xl:relative flex flex-col gap-8 pt-28">
       {isSliderReady && instanceRef.current && (
         <div className="xl:absolute xl:wrapper flex items-center gap-2 xl:gap-0 xl:justify-between bg-transparent xl:pointer-events-none xl:z-10 xl:inset-0">
           <SliderArrowButton
@@ -45,11 +44,10 @@ export function DoctorGreetSection({}: DoctorGreetSectionProps) {
         </div>
       )}
 
-      {(isSliderReady && instanceRef.current) ? (
-        <div className="keen-slider" ref={sliderRef}>
-          {doctors.map((doctor) => <DoctorGreetCard key={doctor.registration} {...doctor} />)}
-        </div>
-      ) : <DoctorGreetCardSkeleton />}
+      <div className="keen-slider" ref={sliderRef}>
+        {doctors.map((doctor) => <DoctorGreetCard key={doctor.registration} {...doctor} />)}
+      </div>
+
 
 
       {isSliderReady && instanceRef.current && (

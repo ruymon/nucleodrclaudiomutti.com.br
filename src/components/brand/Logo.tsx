@@ -14,6 +14,7 @@ const logoVariants = cva(
       },
       size: {
         default: "h-10",
+        md: "h-9",
         sm: "h-6",
         lg: "h-12",
       },
