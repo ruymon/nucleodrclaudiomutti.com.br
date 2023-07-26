@@ -2,6 +2,7 @@
 
 import { Logo } from "@/components/brand/Logo";
 import { navbar } from "@/helpers/navbar";
+import { useNavigationContext } from "@/hooks/useNavigationContext";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { ScheduleAppointmentButton } from "../ScheduleAppointmentButton";
 import { NavbarItem } from "./NavbarItem";
@@ -9,7 +10,10 @@ import { NavbarItem } from "./NavbarItem";
 interface NavbarProps {};
 
 export function Navbar({}: NavbarProps) {
-  const { handleScroll } = useSmoothScroll();
+  const { handleScroll }= useSmoothScroll();
+  const activePath = useNavigationContext((state) => state.activePath);
+  console.log(activePath);
+  
 
   return (
     <header className="w-full z-20 sticky top-0 border-b border-gray-100 bg-white shadow-b hidden lg:flex">
@@ -21,8 +25,7 @@ export function Navbar({}: NavbarProps) {
             <NavbarItem
               key={id}
               onClick={handleScroll}
-              // TODO: Add current section isActive prop
-              // TODO: Constantly check current section and change color accordingly
+              isActive={activePath === id}
               {...props}
             >
               {title}
