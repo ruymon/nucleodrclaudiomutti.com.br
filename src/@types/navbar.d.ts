@@ -1,5 +1,7 @@
+export type NavigationPath = "hero" | "specialties" | "greet" | "contact";
+
 export interface INavbarItem {
-  id: string;
+  id: NavigationPath;
   title: string;
   href: string;
   isExternal?: boolean;
