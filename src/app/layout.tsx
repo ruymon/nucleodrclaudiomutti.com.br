@@ -7,6 +7,7 @@ import { Metadata } from 'next';
 import { DM_Sans, Kalam } from 'next/font/google';
 import { ReactNode } from 'react';
 import './globals.css';
+import { GoogleAnalyticsProvider } from './googleAnalyticsProvider';
 
 const dmSansFont = DM_Sans({
   weight: ['400', '500', '700'],
@@ -44,6 +45,10 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#B45309" />
       </head>
+
+      {process.env.GA_TRACKING_ID && (
+        <GoogleAnalyticsProvider GA_TRACKING_ID={process.env.GA_TRACKING_ID} />
+      )}
 
       <body>
         <Navbar />

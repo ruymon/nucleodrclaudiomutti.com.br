@@ -12,8 +12,6 @@ interface NavbarProps {};
 export function Navbar({}: NavbarProps) {
   const { handleScroll }= useSmoothScroll();
   const activePath = useNavigationContext((state) => state.activePath);
-  console.log(activePath);
-  
 
   return (
     <header className="w-full z-20 sticky top-0 border-b border-gray-100 bg-white shadow-b hidden lg:flex">
